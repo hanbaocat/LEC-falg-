@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config> <!--默认配置 -->
+    <!-- 配置mysql-->
+    <named-config name="mysql-book">
+	    <!--mysql需要使用的驱动类-->
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+		<!--连接语句-->
+        <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/bookdb?allowPublicKeyRetrieval=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;serverTimezone=UTC</property>
+		<!--mysql的用户名-->
+        <property name="user">root</property>
+		<!--我的mysql的密码:根据自己机器进行修改-->
+        <property name="password">123456</property>
+		<!--连接池初始化时创建的连接数:10-->
+        <property name="initialPoolSize">10</property>
+		<!--maxIdleTime：连接的最大空闲时间，如果超过这个时间，某个数据库连接还没有被使用，则会断开掉这个连接。-->
+        <property name="maxIdleTime">30</property>
+		<!--连接池中拥有的最大连接数-->
+        <property name="maxPoolSize">100</property>
+		<!--连接池保持的最小连接数-->
+        <property name="minPoolSize">10</property>
+		<!--连接池为数据源缓存的PreparedStatement的总数-->
+        <property name="maxStatements">200</property>
+    </named-config>
+</c3p0-config>
